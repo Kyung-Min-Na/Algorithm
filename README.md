@@ -1,6 +1,6 @@
 # Algorithm
-algorithm-Report
-code by Python
+#algorithm-Report
+#code by Python
 
 ##20개의 난수 생성
 import random
