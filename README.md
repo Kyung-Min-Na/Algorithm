@@ -1,5 +1,6 @@
 # Algorithm
 algorithm-Report
+code by Python
 
 ##20개의 난수 생성
 import random
@@ -43,39 +44,39 @@ array = heapsort(array)
 print("After heap sort:", array)
 
 ##Bubble sort, Insertion sort, Selection sort, Merge sort
-def bubblesort(arr):
-    n = len(arr)
+def bubblesort(array):
+    n = len(array)
     for i in range(n):
         for j in range(n-i-1):
-            if arr[j] > arr[j+1]:
-                arr[j], arr[j+1] = arr[j+1], arr[j]
-    return arr
+            if array[j] > array[j+1]:
+                array[j], array[j+1] = array[j+1], array[j]
+    return array
 
-def insertionsort(arr):
-    for i in range(1, len(arr)):
-        key = arr[i]
+def insertionsort(array):
+    for i in range(1, len(array)):
+        key = array[i]
         j = i - 1
-        while j >= 0 and arr[j] > key:
-            arr[j+1] = arr[j]
+        while j >= 0 and array[j] > key:
+            array[j+1] = array[j]
             j -= 1
-        arr[j+1] = key
-    return arr
+        array[j+1] = key
+    return array
 
-def selectionsort(arr):
-    n = len(arr)
+def selectionsort(array):
+    n = len(array)
     for i in range(n):
         min_idx = i
         for j in range(i+1, n):
-            if arr[j] < arr[min_idx]:
+            if array[j] < array[min_idx]:
                 min_idx = j
-        arr[i], arr[min_idx] = arr[min_idx], arr[i]
-    return arr
+        array[i], array[min_idx] = array[min_idx], array[i]
+    return array
 
-def mergesort(arr):
-    if len(arr) > 1:
-        mid = len(arr) // 2
-        left = arr[:mid]
-        right = arr[mid:]
+def mergesort(array):
+    if len(array) > 1:
+        mid = len(array) // 2
+        left = array[:mid]
+        right = array[mid:]
 
         mergesort(left)
         mergesort(right)
@@ -84,27 +85,27 @@ def mergesort(arr):
 
         while i < len(left) and j < len(right):
             if left[i] < right[j]:
-                arr[k] = left[i]
+                array[k] = left[i]
                 i += 1
             else:
-                arr[k] = right[j]
+                array[k] = right[j]
                 j += 1
             k += 1
 
         while i < len(left):
-            arr[k] = left[i]
+            array[k] = left[i]
             i += 1
             k += 1
 
         while j < len(right):
-            arr[k] = right[j]
+            array[k] = right[j]
             j += 1
             k += 1
 
-    return arr
+    return array
 
-arr = bubblesort(arr)
-print("After bubble sort:", arr)
+array = bubblesort(array)
+print("After bubble sort:", array)
 
-arr = insertionsort
+array = insertionsort
 
